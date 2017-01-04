@@ -16,11 +16,13 @@ WIN_COMBINATIONS = [
 ]
 
 def won(board)
-  WIN_COMBINATIONS.detect{|board| board.include?}
+  WIN_COMBINATIONS.each do |win_combo|
+    win_combo.include_in?(board)
+  end
 end
 
 # def full
-# earn
+#  board.include?{|WIN_COMBINATIONS|}
 # end
 #
 # def draw
