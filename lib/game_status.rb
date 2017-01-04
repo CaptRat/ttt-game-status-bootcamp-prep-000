@@ -3,7 +3,6 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
-# Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2], # Top row
   [3,4,5], # Middle row
@@ -16,14 +15,11 @@ WIN_COMBINATIONS = [
 ]
 
 def won(board)
-  WIN_COMBINATIONS.each do |win_combo|
-    winner=win_combo.include_in?(board)
-  end
-  winner
+  board.include?(WIN_COMBINATIONS)
 end
 
 # def full
-#  board.include?{|WIN_COMBINATIONS|}
+
 # end
 #
 # def draw
