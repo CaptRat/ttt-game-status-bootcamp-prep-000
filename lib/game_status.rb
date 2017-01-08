@@ -26,7 +26,7 @@ WIN_COMBINATIONS = [
 #      combo_1 = win_combo[0]
 #      combo_2 = win_combo[1]
 #      combo_3 = win_combo[2]
-# 
+#
 #      position_1 = board[combo_1]
 #      position_2 = board[combo_2]
 #      position_3 = board[combo_3]
@@ -42,12 +42,18 @@ def won?(board)
   end
   false
 end
-# def full
-#
-# end
-#
-# def draw
-#
+
+def full?(board)
+  if board.any? { |element| element == " "}
+    return false
+  else
+    return true
+  end
+end
+
+# def draw(board)
+#   #full?(board) == true
+#     #won?(board) == false
 # end
 #
 # def over
